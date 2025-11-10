@@ -23,7 +23,7 @@ export default function OrderPage() {
     {
       id: 'starter',
       name: 'スターター',
-      price: 29800,
+      price: 34800,
       volume: '3,000通/月',
       description: '小規模配信向け',
       features: [
@@ -38,7 +38,7 @@ export default function OrderPage() {
     {
       id: 'volume',
       name: 'ボリューム',
-      price: 100000,
+      price: 120000,
       volume: '150万通/月',
       description: '大量配信向け',
       recommended: true,
@@ -55,7 +55,7 @@ export default function OrderPage() {
     {
       id: 'step',
       name: 'ステップメール',
-      price: 300000,
+      price: 360000,
       volume: '無制限',
       description: '自動化フロー完備',
       features: [

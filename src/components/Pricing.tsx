@@ -23,7 +23,7 @@ export default function Pricing() {
     },
     {
       name: 'スターター',
-      price: '¥29,800',
+      price: '¥34,800',
       period: '/ 月',
       description: '小規模配信向け',
       features: [
@@ -41,7 +41,7 @@ export default function Pricing() {
     },
     {
       name: 'ボリューム',
-      price: '¥100,000',
+      price: '¥120,000',
       period: '/ 月',
       description: '大量配信向け',
       features: [
@@ -60,7 +60,7 @@ export default function Pricing() {
     },
     {
       name: 'ステップメール',
-      price: '¥300,000',
+      price: '¥360,000',
       period: '/ 月',
       description: '自動化フロー完備',
       features: [
@@ -87,12 +87,12 @@ export default function Pricing() {
             料金プラン
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-            企業に最適な、<br />
-            <span className="text-gradient">合理的な価格</span>設定。
+            <span className="text-gradient">市場価格の20%安</span>で、<br />
+            最高品質のサービスを。
           </h2>
           <p className="text-lg text-neutral-600 leading-relaxed">
-            大量配信も、ステップメールも。企業の規模に合わせた柔軟なプラン。<br />
-            クレジットカード登録なし、いつでも解約可能です。
+            大量配信も、ステップメールも。競合より20%安い価格で提供。<br />
+            14日間無料トライアル・いつでも解約可能です。
           </p>
         </ScrollReveal>
 
