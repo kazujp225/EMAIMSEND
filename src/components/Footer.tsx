@@ -5,30 +5,28 @@ export default function Footer() {
     product: {
       title: '製品',
       links: [
-        { name: '機能', href: '#features' },
-        { name: '業種別デモ', href: '#industries' },
-        { name: '料金', href: '#pricing' },
-        { name: 'API', href: '/api' },
-        { name: 'ロードマップ', href: '/roadmap' },
+        { name: '機能', href: '/features' },
+        { name: '料金', href: '/pricing' },
+        { name: '発注', href: '/order' },
+        { name: '無料で始める', href: '/signup' },
       ],
     },
     resources: {
       title: 'リソース',
       links: [
-        { name: 'ドキュメント', href: '/docs' },
-        { name: 'ブログ', href: '/blog' },
-        { name: '使い方ガイド', href: '/guides' },
-        { name: 'テンプレート', href: '/templates' },
-        { name: 'ヘルプセンター', href: '/help' },
+        { name: 'よくある質問', href: '/pricing#faq' },
+        { name: '業種別デモ', href: '/#industries' },
+        { name: '導入事例', href: '/features#use-cases' },
+        { name: 'ヘルプセンター', href: '/contact' },
       ],
     },
     company: {
       title: '会社情報',
       links: [
         { name: '会社概要', href: '/about' },
-        { name: '採用情報', href: '/careers' },
+        { name: '採用情報', href: '/about#team' },
         { name: 'お問い合わせ', href: '/contact' },
-        { name: 'プレスキット', href: '/press' },
+        { name: '運営会社', href: '/about#mission' },
       ],
     },
     legal: {
@@ -37,7 +35,7 @@ export default function Footer() {
         { name: '利用規約', href: '/terms' },
         { name: 'プライバシーポリシー', href: '/privacy' },
         { name: '特定商取引法', href: '/legal' },
-        { name: 'セキュリティ', href: '/security' },
+        { name: '特定電子メール法対応', href: '/about#compliance' },
       ],
     },
   };
@@ -55,9 +53,15 @@ export default function Footer() {
               <span className="text-xl font-bold text-white">SendCraft</span>
             </Link>
             <p className="text-neutral-400 mb-6 leading-relaxed">
-              営業メールを最短30秒で作成・配信。<br />
-              AIで整形、業種別に最適化されたメールを届けます。
+              文章を書く。それ以外は、全部代行。<br />
+              営業メール配信に必要な4つの専門機能を丸ごと代行し、<br />
+              下書きをペーストするだけで今日から新規営業を始められます。
             </p>
+            <div className="mb-6">
+              <Link href="/signup" className="inline-block px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold transition-colors">
+                無料で始める
+              </Link>
+            </div>
             {/* Social Links */}
             <div className="flex gap-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 rounded-lg flex items-center justify-center transition-colors">

@@ -3,6 +3,27 @@
 import { motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
+// Helper icon components for comparison table
+const CheckIcon = ({ color = 'neutral' }: { color?: 'primary' | 'neutral' }) => (
+  <svg
+    className={`w-5 h-5 ${color === 'primary' ? 'text-primary-500' : 'text-success-500'} inline-block`}
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+  </svg>
+);
+
+const XIcon = () => (
+  <svg
+    className="w-5 h-5 text-neutral-300 inline-block"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+  </svg>
+);
+
 export default function Pricing() {
   const plans = [
     {
@@ -291,6 +312,124 @@ export default function Pricing() {
           </div>
         </ScrollReveal>
 
+        {/* Plan Comparison Table */}
+        <ScrollReveal className="max-w-6xl mx-auto mb-16" delay={0.5}>
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-neutral-900 mb-2">プラン機能比較表</h3>
+            <p className="text-neutral-600">各プランの機能を詳しく比較できます</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl border border-neutral-200 overflow-hidden">
+              <thead className="bg-neutral-50">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-neutral-900">機能</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-neutral-900">無料</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-neutral-900">スターター</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-primary-600 bg-primary-50">ボリューム</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-neutral-900">ステップメール</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-200">
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">月間送信数</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">1通</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">3,000通</td>
+                  <td className="px-6 py-4 text-sm text-primary-600 font-semibold text-center bg-primary-50">150万通</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">無制限</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">AI推敲機能</td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                  <td className="px-6 py-4 text-center bg-primary-50"><CheckIcon color="primary" /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">HTMLメール制作</td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                  <td className="px-6 py-4 text-center bg-primary-50"><CheckIcon color="primary" /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">業種別テンプレート</td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                  <td className="px-6 py-4 text-center bg-primary-50"><CheckIcon color="primary" /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">段階配信機能</td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center bg-primary-50"><CheckIcon color="primary" /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">チーム機能</td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center bg-primary-50"><CheckIcon color="primary" /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">ステップメール・自動化</td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center"><XIcon /></td>
+                  <td className="px-6 py-4 text-center bg-primary-50"><XIcon /></td>
+                  <td className="px-6 py-4 text-center"><CheckIcon /></td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm text-neutral-700">サポート</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">FAQ</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">24時間以内</td>
+                  <td className="px-6 py-4 text-sm text-primary-600 font-semibold text-center bg-primary-50">12時間以内</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">専任CSM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </ScrollReveal>
+
+        {/* Support & Guarantee Section */}
+        <ScrollReveal className="max-w-5xl mx-auto mb-16" delay={0.6}>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 border border-primary-200">
+              <div className="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-neutral-900 mb-2">14日間返金保証</h4>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                有料プランをご契約後、14日以内であれば理由を問わず全額返金いたします。安心してお試しください。
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-secondary-50 to-white rounded-2xl p-8 border border-secondary-200">
+              <div className="w-12 h-12 bg-secondary-500 text-white rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-neutral-900 mb-2">専門サポート体制</h4>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                メール配信のプロフェッショナルチームが、設定から運用までしっかりサポート。初めての方も安心です。
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-8 border border-primary-200">
+              <div className="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center mb-4">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-neutral-900 mb-2">いつでもプラン変更</h4>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                ビジネスの成長に合わせて、いつでもプランを変更可能。解約手数料や最低利用期間もありません。
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* FAQ Section */}
         <ScrollReveal className="max-w-3xl mx-auto" delay={0.3}>
           <h3 className="text-2xl font-bold text-neutral-900 text-center mb-8">よくある質問</h3>
@@ -302,15 +441,31 @@ export default function Pricing() {
               },
               {
                 q: '月の途中でプラン変更できますか？',
-                a: 'はい、いつでも変更可能です。アップグレードの場合は即座に反映され、ダウングレードの場合は次の更新日から適用されます。',
+                a: 'はい、いつでも変更可能です。アップグレードの場合は即座に反映され、ダウングレードの場合は次の更新日から適用されます。差額は日割り計算で調整されます。',
               },
               {
                 q: '送信通数が上限を超えたらどうなりますか？',
-                a: 'その月は送信できなくなりますが、翌月には自動的にリセットされます。上位プランへのアップグレードも可能です。',
+                a: 'その月は送信できなくなりますが、翌月には自動的にリセットされます。上位プランへのアップグレードも可能です。追加料金が発生することはありません。',
               },
               {
                 q: '解約はいつでもできますか？',
-                a: 'はい、管理画面からいつでも解約可能です。解約手数料や最低利用期間はありません。',
+                a: 'はい、管理画面からいつでも解約可能です。解約手数料や最低利用期間はありません。解約後もそのサイクル終了まではサービスをご利用いただけます。',
+              },
+              {
+                q: '14日間の返金保証について詳しく教えてください',
+                a: '有料プランをご契約後、14日以内であれば理由を問わず全額返金いたします。返金手続きは管理画面またはサポートチームへのご連絡で簡単に行えます。',
+              },
+              {
+                q: 'メールの到達率はどのくらいですか？',
+                a: '平均到達率は95%以上を保証しています。SPF/DKIM/DMARCの設定やスパムフィルタ対策を万全に行っており、確実に届けることができます。',
+              },
+              {
+                q: '法人リストは最新のものですか？',
+                a: 'はい、150万件の法人リストは毎月更新されています。存在しない企業や古いデータは自動でクレンジングされ、常に最新の状態を保っています。',
+              },
+              {
+                q: '買い切りプランと月額プランの違いは何ですか？',
+                a: '買い切りプランは初期費用のみで永年ご利用いただけます。ランニングコストはAPI費用のみで、ソースコード提供やオンプレミス対応も含まれます。月額プランは柔軟に変更・解約が可能で、初期費用を抑えられます。',
               },
             ].map((faq, index) => (
               <motion.details
@@ -330,6 +485,18 @@ export default function Pricing() {
                 <p className="mt-4 text-neutral-600 leading-relaxed">{faq.a}</p>
               </motion.details>
             ))}
+          </div>
+
+          <div className="text-center mt-8 p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+            <p className="text-neutral-700 mb-4">その他のご質問は、お気軽にお問い合わせください</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="btn-primary">
+                お問い合わせ
+              </a>
+              <a href="/order" className="btn-secondary">
+                お見積もり・発注
+              </a>
+            </div>
           </div>
         </ScrollReveal>
       </div>

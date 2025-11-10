@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import OutsourcingValue from '@/components/OutsourcingValue';
 import Features from '@/components/Features';
 import Comparison from '@/components/Comparison';
 import IndustryDemo from '@/components/IndustryDemo';
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <OutsourcingValue />
         <Features />
         <Comparison />
         <IndustryDemo />
