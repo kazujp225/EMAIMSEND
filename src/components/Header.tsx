@@ -42,20 +42,20 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+            <Link href="/features" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               機能
             </Link>
-            <Link href="#industries" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-              業種別
-            </Link>
-            <Link href="#pricing" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+            <Link href="/pricing" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               料金
             </Link>
-            <Link href="/order" className="text-neutral-600 hover:text-neutral-900 transition-colors font-semibold">
-              お見積もり・発注
+            <Link href="/order" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+              発注
             </Link>
-            <Link href="/docs" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-              ドキュメント
+            <Link href="/contact" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+              お問い合わせ
+            </Link>
+            <Link href="/about" className="text-neutral-600 hover:text-neutral-900 transition-colors">
+              会社概要
             </Link>
           </div>
 
@@ -97,33 +97,27 @@ export default function Header() {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col space-y-4">
-              {['機能', '業種別', '料金', 'お見積もり・発注', 'ドキュメント'].map((item, index) => {
-                const href =
-                  item === 'ドキュメント' ? '/docs' :
-                  item === 'お見積もり・発注' ? '/order' :
-                  `#${
-                    item === '機能' ? 'features' :
-                    item === '業種別' ? 'industries' :
-                    'pricing'
-                  }`;
-                return (
-                  <motion.div
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
+              {[
+                { label: '機能', href: '/features' },
+                { label: '料金', href: '/pricing' },
+                { label: '発注', href: '/order' },
+                { label: 'お問い合わせ', href: '/contact' },
+                { label: '会社概要', href: '/about' }
+              ].map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <Link
+                    href={item.href}
+                    className="text-neutral-600 hover:text-neutral-900 transition-colors block"
                   >
-                    <Link
-                      href={href}
-                      className={`text-neutral-600 hover:text-neutral-900 transition-colors block ${
-                        item === 'お見積もり・発注' ? 'font-semibold' : ''
-                      }`}
-                    >
-                      {item}
-                    </Link>
-                  </motion.div>
-                );
-              })}
+                    {item.label}
+                  </Link>
+                </motion.div>
+              ))}
               <hr className="border-neutral-200" />
               <Link href="/login" className="text-neutral-700 hover:text-neutral-900 font-medium">
                 ログイン
