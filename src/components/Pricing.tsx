@@ -8,7 +8,7 @@ export default function Pricing() {
     {
       name: '無料',
       price: '¥0',
-      period: '/ 月',
+      period: '',
       description: 'まずはお試し',
       features: [
         { text: '1通の送信', included: true },
@@ -23,11 +23,11 @@ export default function Pricing() {
     },
     {
       name: 'スターター',
-      price: '¥9,800',
+      price: '¥29,800',
       period: '/ 月',
-      description: '個人・小規模チーム向け',
+      description: '小規模配信向け',
       features: [
-        { text: '100通 / 月', included: true },
+        { text: '3,000通 / 月', included: true },
         { text: 'CSS強化（SONNET）', included: true },
         { text: 'リアルタイムプレビュー', included: true },
         { text: '詳細分析レポート', included: true },
@@ -37,40 +37,40 @@ export default function Pricing() {
         { text: 'メールサポート（24時間以内）', included: true },
       ],
       cta: '14日間無料トライアル',
-      highlighted: true,
-      badge: '人気No.1',
-    },
-    {
-      name: 'スケール',
-      price: '¥29,800',
-      period: '/ 月',
-      description: '成長企業向け',
-      features: [
-        { text: '1,000通 / 月', included: true },
-        { text: 'スターターの全機能', included: true },
-        { text: '段階配信機能', included: true },
-        { text: '到達レポート', included: true },
-        { text: 'チーム機能（5ユーザー）', included: true },
-        { text: 'ドメイン認証サポート', included: true },
-        { text: '優先サポート（12時間以内）', included: true },
-        { text: 'カスタムテンプレート', included: true },
-      ],
-      cta: '14日間無料トライアル',
       highlighted: false,
     },
     {
-      name: 'エンタープライズ',
-      price: '個別見積',
-      period: '',
-      description: '大企業向け',
+      name: 'ボリューム',
+      price: '¥100,000',
+      period: '/ 月',
+      description: '大量配信向け',
       features: [
-        { text: '10,000通〜 / 月', included: true },
-        { text: 'スケールの全機能', included: true },
+        { text: '150万通 / 月', included: true },
+        { text: 'スターターの全機能', included: true },
+        { text: '段階配信機能', included: true },
+        { text: '到達レポート', included: true },
+        { text: 'チーム機能（10ユーザー）', included: true },
+        { text: 'ドメイン認証サポート', included: true },
+        { text: '優先サポート（12時間以内）', included: true },
         { text: 'API提供', included: true },
+      ],
+      cta: '14日間無料トライアル',
+      highlighted: true,
+      badge: '企業向け人気',
+    },
+    {
+      name: 'ステップメール',
+      price: '¥300,000',
+      period: '/ 月',
+      description: '自動化フロー完備',
+      features: [
+        { text: '無制限配信', included: true },
+        { text: 'ボリュームの全機能', included: true },
+        { text: 'ステップメール機能', included: true },
+        { text: 'シナリオ自動化', included: true },
+        { text: 'ABテスト機能', included: true },
         { text: 'カスタムブランディング', included: true },
-        { text: 'SSO対応', included: true },
         { text: '専任CSM', included: true },
-        { text: '24時間サポート', included: true },
         { text: 'SLA保証（99.9%）', included: true },
       ],
       cta: 'お問い合わせ',
@@ -87,11 +87,11 @@ export default function Pricing() {
             料金プラン
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-            使った分だけ。<br />
-            <span className="text-gradient">明朗会計</span>で安心。
+            企業に最適な、<br />
+            <span className="text-gradient">合理的な価格</span>設定。
           </h2>
           <p className="text-lg text-neutral-600 leading-relaxed">
-            すべてのプランで14日間の無料トライアル。<br />
+            大量配信も、ステップメールも。企業の規模に合わせた柔軟なプラン。<br />
             クレジットカード登録なし、いつでも解約可能です。
           </p>
         </ScrollReveal>
@@ -150,7 +150,7 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <motion.a
-                  href={plan.name === 'エンタープライズ' ? '/contact' : '/signup'}
+                  href={plan.name === 'ステップメール' ? '/contact' : '/signup'}
                   className={`block text-center font-semibold px-6 py-3 rounded-xl transition-all duration-200 ${
                     plan.highlighted
                       ? 'bg-primary-500 text-white hover:bg-primary-600 shadow-md hover:shadow-lg'
