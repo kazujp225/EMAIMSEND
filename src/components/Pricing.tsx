@@ -76,6 +76,25 @@ export default function Pricing() {
       cta: 'お問い合わせ',
       highlighted: false,
     },
+    {
+      name: 'ツール買い切り',
+      price: '¥500,000',
+      period: '（一括払い）',
+      description: '永年使用可能',
+      features: [
+        { text: '全機能利用可能', included: true },
+        { text: '自社メールリスト追加可能', included: true },
+        { text: 'API費用のみで永年無料', included: true },
+        { text: '2年間の保守・アップデート込み', included: true },
+        { text: 'オンプレミス対応', included: true },
+        { text: 'ソースコード提供', included: true },
+        { text: 'カスタマイズ可能', included: true },
+        { text: '専任サポート', included: true },
+      ],
+      cta: 'お問い合わせ',
+      highlighted: false,
+      badge: '買い切り',
+    },
   ];
 
   return (
@@ -96,9 +115,9 @@ export default function Pricing() {
           </p>
         </ScrollReveal>
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
-          {plans.map((plan, index) => (
+        {/* Pricing Cards - Monthly Plans */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
+          {plans.slice(0, 4).map((plan, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <motion.div
                 className={`relative rounded-2xl border-2 p-6 lg:p-8 transition-all duration-300 h-full ${
@@ -165,6 +184,112 @@ export default function Pricing() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* One-time Purchase Plan */}
+        <ScrollReveal delay={0.4}>
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="text-center mb-8">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white rounded-full text-sm font-bold mb-4">
+                買い切りプラン
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">
+                ツールを<span className="text-gradient">完全所有</span>したい企業様へ
+              </h3>
+              <p className="text-neutral-600">
+                初期費用のみで、永年ご利用いただけます。ランニングコストはAPI費用のみ。
+              </p>
+            </div>
+
+            <motion.div
+              className="relative rounded-2xl border-4 border-secondary-500 bg-gradient-to-br from-secondary-50 to-white p-8 md:p-10 shadow-2xl"
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Badge */}
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  {plans[4].badge}
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Left: Price & Description */}
+                <div className="text-center md:text-left">
+                  <h4 className="text-2xl font-bold text-neutral-900 mb-2">
+                    {plans[4].name}
+                  </h4>
+                  <div className="mb-4">
+                    <div className="text-5xl font-bold text-secondary-600 mb-1">
+                      {plans[4].price}
+                    </div>
+                    <div className="text-sm text-neutral-500">{plans[4].period}</div>
+                  </div>
+                  <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-lg text-sm font-semibold mb-4">
+                    {plans[4].description}
+                  </div>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-2 text-neutral-700">
+                      <svg className="w-5 h-5 text-success-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-semibold">API費用のみで永年無料</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-neutral-700">
+                      <svg className="w-5 h-5 text-success-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-semibold">2年間の保守・アップデート込み</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-neutral-700">
+                      <svg className="w-5 h-5 text-success-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-semibold">自社メールリスト追加可能</span>
+                    </div>
+                  </div>
+
+                  <motion.a
+                    href="/contact"
+                    className="inline-block bg-gradient-to-r from-secondary-500 to-secondary-600 text-white font-bold px-8 py-4 rounded-xl hover:from-secondary-600 hover:to-secondary-700 shadow-lg hover:shadow-xl transition-all"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {plans[4].cta}
+                  </motion.a>
+                </div>
+
+                {/* Right: Features */}
+                <div>
+                  <h5 className="text-lg font-bold text-neutral-900 mb-4">含まれる機能</h5>
+                  <ul className="space-y-2">
+                    {plans[4].features.map((feature, index) => (
+                      <motion.li
+                        key={index}
+                        className="flex items-start gap-2 text-sm text-neutral-700"
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <svg className="w-5 h-5 text-secondary-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        {feature.text}
+                      </motion.li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 p-4 bg-white rounded-lg border border-secondary-200">
+                    <p className="text-xs text-neutral-600 leading-relaxed">
+                      ※ 3年目以降の保守・アップデートは年間¥100,000（オプション）<br />
+                      ※ オンプレミス環境での構築をサポートします
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </ScrollReveal>
 
         {/* FAQ Section */}
         <ScrollReveal className="max-w-3xl mx-auto" delay={0.3}>

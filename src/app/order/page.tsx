@@ -68,6 +68,24 @@ export default function OrderPage() {
         'SLA保証（99.9%）',
       ],
     },
+    {
+      id: 'onetime',
+      name: 'ツール買い切り',
+      price: 500000,
+      volume: '永年使用可能',
+      description: '一括払い',
+      recommended: false,
+      badge: '買い切り',
+      features: [
+        '全機能利用可能',
+        '自社メールリスト追加可能',
+        'API費用のみで永年無料',
+        '2年間の保守・アップデート込み',
+        'オンプレミス対応',
+        'ソースコード提供',
+        'カスタマイズ可能',
+      ],
+    },
   ];
 
   const selectedPlanData = plans.find((p) => p.id === selectedPlan)!;
@@ -120,7 +138,7 @@ export default function OrderPage() {
                   {/* Plan Selection */}
                   <div className="card">
                     <h2 className="text-2xl font-bold text-neutral-900 mb-6">プラン選択</h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                       {plans.map((plan) => (
                         <motion.button
                           key={plan.id}
@@ -325,13 +343,16 @@ export default function OrderPage() {
 
                       <div className="p-4 bg-white rounded-lg border border-primary-200">
                         <div className="flex justify-between items-baseline mb-2">
-                          <span className="text-sm text-neutral-600">月額料金</span>
+                          <span className="text-sm text-neutral-600">
+                            {selectedPlanData.id === 'onetime' ? '一括料金' : '月額料金'}
+                          </span>
                           <span className="text-3xl font-bold text-primary-600">
                             ¥{selectedPlanData.price.toLocaleString()}
                           </span>
                         </div>
                         <div className="text-xs text-neutral-500">
                           {selectedPlanData.volume}
+                          {selectedPlanData.id === 'onetime' && ' / API費用のみ'}
                         </div>
                       </div>
 
