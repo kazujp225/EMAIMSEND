@@ -1,5 +1,7 @@
 import Hero from '@/components/Hero';
+import PainPoints from '@/components/PainPoints';
 import OutsourcingValue from '@/components/OutsourcingValue';
+import SimpleSteps from '@/components/SimpleSteps';
 import Features from '@/components/Features';
 import Comparison from '@/components/Comparison';
 import IndustryDemo from '@/components/IndustryDemo';
@@ -14,7 +16,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PainPoints />
         <OutsourcingValue />
+        <SimpleSteps />
         <Features />
         <Comparison />
         <IndustryDemo />
