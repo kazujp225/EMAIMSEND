@@ -57,7 +57,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
               </span>
-              最短30秒でプロ品質のメールが完成
+              本来3ヶ月かかる準備を、30秒で
             </motion.div>
 
             <motion.h1
@@ -66,9 +66,18 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              貼って、整えて、刺さる。<br />
-              <span className="text-gradient">営業メール</span>を<br className="md:hidden" />1クリックで。
+              リファラルだけでは、もう限界。<br />
+              でも、<span className="text-gradient">新規営業の準備</span>に<br className="md:hidden" />3ヶ月もかけられない。
             </motion.h1>
+
+            <motion.h2
+              className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-900 mb-5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+            >
+              文章を書く。それ以外は、<span className="text-gradient">全部代行</span>。
+            </motion.h2>
 
             <motion.p
               className="text-base md:text-lg text-neutral-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0"
@@ -76,9 +85,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              文章をペーストして「CSS強化」を押すだけ。<br />
-              <span className="font-semibold text-neutral-700">SONNET</span>がプロ品質のHTML＆インラインCSSに整形。<br />
-              業種別に最適な相手へ、感じよく届きます。
+              営業メール配信に必要な<span className="font-semibold text-neutral-700">「配信インフラ」「HTMLメール制作」「営業リスト」</span>の3つを丸ごと代行。<br />
+              文章をペーストするだけで、今日から新規営業を始められます。
             </motion.p>
 
             {/* CTA Buttons */}
@@ -90,12 +98,12 @@ export default function Hero() {
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link href="/signup" className="btn-primary btn-lg block">
-                  無料で1通送ってみる
+                  今すぐ無料で始める
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="#industries" className="btn-secondary btn-lg block">
-                  業種別デモを見る
+                <Link href="#outsourcing-value" className="btn-secondary btn-lg block">
+                  代行の詳細を見る
                 </Link>
               </motion.div>
             </motion.div>
