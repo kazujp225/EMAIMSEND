@@ -2,6 +2,24 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Pricing from '@/components/Pricing';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '料金プラン | SendCraft - 営業メール配信代行サービス',
+  description: '市場価格の20%安で、プロ品質の営業メールを。無料プランからスタート可能。月額34,800円〜、送信通数3,000通から。クレジットカード不要で今すぐ始められます。',
+  keywords: '営業メール 料金, メール配信 価格, HTMLメール作成 費用, メール代行 料金プラン',
+  openGraph: {
+    title: '料金プラン | SendCraft',
+    description: '市場価格の20%安。無料プランからスタートして、必要に応じてスケール可能。',
+    type: 'website',
+    url: 'https://sendcraft.jp/pricing',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '料金プラン | SendCraft',
+    description: '市場価格の20%安で、プロ品質の営業メールを。無料プランあり。',
+  },
+};
 
 export default function PricingPage() {
   return (
