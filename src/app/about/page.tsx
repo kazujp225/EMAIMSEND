@@ -222,6 +222,226 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Timeline Section */}
+      <section className="section bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
+              歩み
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+              SendCraftのこれまで
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-32 text-right">
+                  <div className="text-2xl font-bold text-primary-600">2024年10月</div>
+                </div>
+                <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                  <div className="w-4 h-4 bg-primary-500 rounded-full"></div>
+                  <div className="w-0.5 h-full bg-primary-200"></div>
+                </div>
+                <div className="flex-1 pb-8">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">サービス構想開始</h3>
+                  <p className="text-neutral-600 leading-relaxed">
+                    営業メール配信の課題を解決するため、SendCraftの構想がスタート。複雑なツールと到達率重視のサービスの間に、新しいカテゴリを創造することを決意。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-32 text-right">
+                  <div className="text-2xl font-bold text-primary-600">2025年1月</div>
+                </div>
+                <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                  <div className="w-4 h-4 bg-primary-500 rounded-full"></div>
+                  <div className="w-0.5 h-full bg-primary-200"></div>
+                </div>
+                <div className="flex-1 pb-8">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">MVP開発開始</h3>
+                  <p className="text-neutral-600 leading-relaxed">
+                    AI推敲機能とHTMLメール制作機能の開発を開始。最初の1通を最短で、最高品質で届けることに集中。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-32 text-right">
+                  <div className="text-2xl font-bold text-secondary-600">2025年4月</div>
+                </div>
+                <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                  <div className="w-4 h-4 bg-secondary-500 rounded-full"></div>
+                  <div className="w-0.5 h-full bg-secondary-200"></div>
+                </div>
+                <div className="flex-1 pb-8">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">ベータ版リリース</h3>
+                  <p className="text-neutral-600 leading-relaxed">
+                    限定ユーザー向けにベータ版をリリース。フィードバックを基に、UI/UXを大幅改善。平均送信時間を60秒から30秒に短縮。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-32 text-right">
+                  <div className="text-2xl font-bold text-secondary-600">2025年7月</div>
+                </div>
+                <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                  <div className="w-4 h-4 bg-secondary-500 rounded-full"></div>
+                  <div className="w-0.5 h-full bg-secondary-200"></div>
+                </div>
+                <div className="flex-1 pb-8">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">正式版リリース</h3>
+                  <p className="text-neutral-600 leading-relaxed">
+                    業種別テンプレート、150万件の法人リスト、到達率95%以上を達成し、正式版をリリース。無料プランでの提供を開始。
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-6">
+                <div className="flex-shrink-0 w-32 text-right">
+                  <div className="text-2xl font-bold text-primary-600">2025年11月</div>
+                  <div className="text-sm text-neutral-500 mt-1">現在</div>
+                </div>
+                <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                  <div className="w-4 h-4 bg-primary-500 rounded-full animate-pulse"></div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">機能拡充フェーズ</h3>
+                  <p className="text-neutral-600 leading-relaxed">
+                    ステップメール機能、ABテスト機能を開発中。大企業向けのエンタープライズプランの提供準備を進行中。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="section bg-neutral-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full text-sm font-semibold mb-4">
+              チーム
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+              多様な専門性を持つチーム
+            </h2>
+            <p className="text-lg text-neutral-600">
+              プロダクト、エンジニアリング、デザイン、マーケティングの<br />
+              プロフェッショナルが集結しています
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 text-center border border-neutral-200">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                PM
+              </div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-2">プロダクトチーム</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                SaaS業界での豊富な経験を持つプロダクトマネージャーが、ユーザー体験を最優先に設計。
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 text-center border border-neutral-200">
+              <div className="w-20 h-20 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                ENG
+              </div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-2">エンジニアリングチーム</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                スケーラブルなインフラとAI技術の専門家が、高速で安定したシステムを構築。
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 text-center border border-neutral-200">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                CS
+              </div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-2">カスタマーサクセスチーム</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm">
+                お客様の成功を第一に考え、導入から運用まで手厚くサポートいたします。
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="inline-block bg-white rounded-2xl p-8 border border-neutral-200 max-w-2xl">
+              <h3 className="text-xl font-bold text-neutral-900 mb-4">一緒に働きませんか？</h3>
+              <p className="text-neutral-600 leading-relaxed mb-6">
+                SendCraftは、営業メール配信の新しい基準を作るために、チームメンバーを募集しています。<br />
+                プロダクトエンジニア、デザイナー、マーケターなど、さまざまなポジションで募集中です。
+              </p>
+              <Link href="/careers" className="btn-primary">
+                採用情報を見る
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="section bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
+              パートナー
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+              信頼できるパートナー企業
+            </h2>
+            <p className="text-lg text-neutral-600">
+              SendCraftは、業界をリードする企業とパートナーシップを結んでいます
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="bg-neutral-50 rounded-xl p-8 flex items-center justify-center border border-neutral-200 hover:shadow-md transition-shadow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl mx-auto mb-3 flex items-center justify-center text-white font-bold text-xl">
+                  AWS
+                </div>
+                <div className="text-sm font-semibold text-neutral-700">Amazon Web Services</div>
+              </div>
+            </div>
+            <div className="bg-neutral-50 rounded-xl p-8 flex items-center justify-center border border-neutral-200 hover:shadow-md transition-shadow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-3 flex items-center justify-center text-white font-bold text-xl">
+                  SG
+                </div>
+                <div className="text-sm font-semibold text-neutral-700">SendGrid</div>
+              </div>
+            </div>
+            <div className="bg-neutral-50 rounded-xl p-8 flex items-center justify-center border border-neutral-200 hover:shadow-md transition-shadow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl mx-auto mb-3 flex items-center justify-center text-white font-bold text-xl">
+                  ST
+                </div>
+                <div className="text-sm font-semibold text-neutral-700">Stripe</div>
+              </div>
+            </div>
+            <div className="bg-neutral-50 rounded-xl p-8 flex items-center justify-center border border-neutral-200 hover:shadow-md transition-shadow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl mx-auto mb-3 flex items-center justify-center text-white font-bold text-xl">
+                  CF
+                </div>
+                <div className="text-sm font-semibold text-neutral-700">Cloudflare</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-neutral-600 mb-4">パートナーシップにご興味のある企業様</p>
+            <Link href="/contact" className="btn-secondary">
+              お問い合わせ
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section bg-gradient-to-br from-primary-500 to-primary-600 text-white">
         <div className="container-custom text-center">
