@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import ScrollReveal from './ScrollReveal';
 
 export default function IndustryDemo() {
   const industries = [
@@ -60,7 +62,7 @@ export default function IndustryDemo() {
     <section id="industries" className="section bg-neutral-50">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full text-sm font-semibold mb-4">
             業種別デモ
           </div>
@@ -72,14 +74,14 @@ export default function IndustryDemo() {
             150万件の法人リストを10業種に分類。<br />
             業界特有の課題とキーワードで、刺さる提案を届けます。
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Industry Selection */}
-          <div className="lg:col-span-1">
+          <ScrollReveal className="lg:col-span-1">
             <div className="space-y-2 sticky top-24">
-              {industries.map((industry) => (
-                <button
+              {industries.map((industry, index) => (
+                <motion.button
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry)}
                   className={`w-full text-left p-4 rounded-xl transition-all duration-200 ${
@@ -87,109 +89,191 @@ export default function IndustryDemo() {
                       ? 'bg-white shadow-md border-2 border-primary-500'
                       : 'bg-white border-2 border-transparent hover:border-primary-200 hover:shadow-sm'
                   }`}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-center gap-3">
-                    <div className="text-3xl">{industry.icon}</div>
+                    <motion.div
+                      className="text-3xl"
+                      animate={selectedIndustry.id === industry.id ? { scale: [1, 1.2, 1] } : {}}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {industry.icon}
+                    </motion.div>
                     <div className="flex-1">
                       <div className="font-semibold text-neutral-900">{industry.name}</div>
                       <div className="text-xs text-neutral-500 mt-0.5">{industry.keywords}</div>
                     </div>
-                    {selectedIndustry.id === industry.id && (
-                      <svg className="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    )}
+                    <AnimatePresence>
+                      {selectedIndustry.id === industry.id && (
+                        <motion.svg
+                          className="w-5 h-5 text-primary-500"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          initial={{ scale: 0, rotate: -180 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                          exit={{ scale: 0, rotate: 180 }}
+                          transition={{ type: "spring", stiffness: 200 }}
+                        >
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </motion.svg>
+                      )}
+                    </AnimatePresence>
                   </div>
-                </button>
+                </motion.button>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Email Preview */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-xl border border-neutral-200 overflow-hidden">
-              {/* Email Header */}
-              <div className="bg-gradient-to-r from-neutral-50 to-neutral-100 border-b border-neutral-200 p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0">
-                    {selectedIndustry.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs font-semibold text-neutral-500 uppercase">件名</span>
-                      <span className="px-2 py-0.5 bg-success-100 text-success-700 text-xs rounded-full font-medium">
-                        AI最適化済み
-                      </span>
-                    </div>
-                    <div className="text-lg font-semibold text-neutral-900 break-words">
-                      {selectedIndustry.subject}
+          <ScrollReveal className="lg:col-span-2" delay={0.2}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedIndustry.id}
+                className="bg-white rounded-2xl shadow-xl border border-neutral-200 overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Email Header */}
+                <div className="bg-gradient-to-r from-neutral-50 to-neutral-100 border-b border-neutral-200 p-6">
+                  <div className="flex items-start gap-4">
+                    <motion.div
+                      className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-2xl flex-shrink-0"
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ type: "spring", stiffness: 200 }}
+                    >
+                      {selectedIndustry.icon}
+                    </motion.div>
+                    <div className="flex-1 min-w-0">
+                      <motion.div
+                        className="flex items-center gap-2 mb-2"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 }}
+                      >
+                        <span className="text-xs font-semibold text-neutral-500 uppercase">件名</span>
+                        <span className="px-2 py-0.5 bg-success-100 text-success-700 text-xs rounded-full font-medium">
+                          AI最適化済み
+                        </span>
+                      </motion.div>
+                      <motion.div
+                        className="text-lg font-semibold text-neutral-900 break-words"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        {selectedIndustry.subject}
+                      </motion.div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Email Body */}
-              <div className="p-6 lg:p-8">
-                <div className="prose prose-neutral max-w-none">
-                  <div className="whitespace-pre-wrap text-neutral-700 leading-relaxed">
-                    {selectedIndustry.preview}
+                {/* Email Body */}
+                <motion.div
+                  className="p-6 lg:p-8"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <div className="prose prose-neutral max-w-none">
+                    <div className="whitespace-pre-wrap text-neutral-700 leading-relaxed">
+                      {selectedIndustry.preview}
+                    </div>
                   </div>
-                </div>
 
-                {/* Email Footer */}
-                <div className="mt-8 pt-6 border-t border-neutral-200">
-                  <div className="flex flex-wrap gap-3">
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg text-sm">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                      </svg>
-                      HTMLメール
-                    </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-success-50 text-success-700 rounded-lg text-sm">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      配信停止リンク付き
-                    </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary-50 text-secondary-700 rounded-lg text-sm">
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                      </svg>
-                      CSS強化済み
+                  {/* Email Footer */}
+                  <div className="mt-8 pt-6 border-t border-neutral-200">
+                    <div className="flex flex-wrap gap-3">
+                      <motion.div
+                        className="flex items-center gap-2 px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg text-sm"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.4 }}
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        HTMLメール
+                      </motion.div>
+                      <motion.div
+                        className="flex items-center gap-2 px-3 py-1.5 bg-success-50 text-success-700 rounded-lg text-sm"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.5 }}
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        配信停止リンク付き
+                      </motion.div>
+                      <motion.div
+                        className="flex items-center gap-2 px-3 py-1.5 bg-secondary-50 text-secondary-700 rounded-lg text-sm"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.6 }}
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                        </svg>
+                        CSS強化済み
+                      </motion.div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-6">
-              <div className="bg-white rounded-xl p-4 border border-neutral-200 text-center">
-                <div className="text-2xl font-bold text-primary-600">95%</div>
-                <div className="text-xs text-neutral-500 mt-1">開封率</div>
-              </div>
-              <div className="bg-white rounded-xl p-4 border border-neutral-200 text-center">
-                <div className="text-2xl font-bold text-primary-600">42%</div>
-                <div className="text-xs text-neutral-500 mt-1">クリック率</div>
-              </div>
-              <div className="bg-white rounded-xl p-4 border border-neutral-200 text-center">
-                <div className="text-2xl font-bold text-primary-600">8.5%</div>
-                <div className="text-xs text-neutral-500 mt-1">返信率</div>
-              </div>
-            </div>
-          </div>
+            <motion.div
+              className="grid grid-cols-3 gap-4 mt-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              {[
+                { value: '95%', label: '開封率' },
+                { value: '42%', label: 'クリック率' },
+                { value: '8.5%', label: '返信率' },
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-xl p-4 border border-neutral-200 text-center"
+                  whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                >
+                  <div className="text-2xl font-bold text-primary-600">{stat.value}</div>
+                  <div className="text-xs text-neutral-500 mt-1">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </ScrollReveal>
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <ScrollReveal className="mt-16 text-center" delay={0.4}>
           <p className="text-neutral-600 mb-6">
             他の業種のテンプレートも多数ご用意しています
           </p>
-          <a href="/industries" className="btn-secondary btn-lg inline-block">
+          <motion.a
+            href="/industries"
+            className="btn-secondary btn-lg inline-block"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             全業種のテンプレートを見る
-          </a>
-        </div>
+          </motion.a>
+        </ScrollReveal>
       </div>
     </section>
   );

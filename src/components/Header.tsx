@@ -1,13 +1,35 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollY } = useScroll();
+  const headerBackground = useTransform(
+    scrollY,
+    [0, 100],
+    ['rgba(255, 255, 255, 0.95)', 'rgba(255, 255, 255, 1)']
+  );
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
+    <motion.header
+      className="sticky top-0 z-50 backdrop-blur-sm border-b border-neutral-200"
+      style={{ backgroundColor: headerBackground }}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -39,9 +61,11 @@ export default function Header() {
             <Link href="/login" className="text-neutral-700 hover:text-neutral-900 font-medium transition-colors">
               ログイン
             </Link>
-            <Link href="/signup" className="btn-primary">
-              無料で始める
-            </Link>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link href="/signup" className="btn-primary">
+                無料で始める
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile menu button */}
@@ -62,20 +86,33 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-200">
+          <motion.div
+            className="md:hidden py-4 border-t border-neutral-200"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <div className="flex flex-col space-y-4">
-              <Link href="#features" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-                機能
-              </Link>
-              <Link href="#industries" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-                業種別
-              </Link>
-              <Link href="#pricing" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-                料金
-              </Link>
-              <Link href="/docs" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-                ドキュメント
-              </Link>
+              {['機能', '業種別', '料金', 'ドキュメント'].map((item, index) => {
+                const href = item === 'ドキュメント' ? '/docs' : `#${
+                  item === '機能' ? 'features' :
+                  item === '業種別' ? 'industries' :
+                  'pricing'
+                }`;
+                return (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    <Link href={href} className="text-neutral-600 hover:text-neutral-900 transition-colors block">
+                      {item}
+                    </Link>
+                  </motion.div>
+                );
+              })}
               <hr className="border-neutral-200" />
               <Link href="/login" className="text-neutral-700 hover:text-neutral-900 font-medium">
                 ログイン
@@ -84,9 +121,9 @@ export default function Header() {
                 無料で始める
               </Link>
             </div>
-          </div>
+          </motion.div>
         )}
       </nav>
-    </header>
+    </motion.header>
   );
 }
