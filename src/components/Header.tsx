@@ -51,6 +51,9 @@ export default function Header() {
             <Link href="#pricing" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               料金
             </Link>
+            <Link href="/order" className="text-neutral-600 hover:text-neutral-900 transition-colors font-semibold">
+              お見積もり・発注
+            </Link>
             <Link href="/docs" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               ドキュメント
             </Link>
@@ -94,12 +97,15 @@ export default function Header() {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col space-y-4">
-              {['機能', '業種別', '料金', 'ドキュメント'].map((item, index) => {
-                const href = item === 'ドキュメント' ? '/docs' : `#${
-                  item === '機能' ? 'features' :
-                  item === '業種別' ? 'industries' :
-                  'pricing'
-                }`;
+              {['機能', '業種別', '料金', 'お見積もり・発注', 'ドキュメント'].map((item, index) => {
+                const href =
+                  item === 'ドキュメント' ? '/docs' :
+                  item === 'お見積もり・発注' ? '/order' :
+                  `#${
+                    item === '機能' ? 'features' :
+                    item === '業種別' ? 'industries' :
+                    'pricing'
+                  }`;
                 return (
                   <motion.div
                     key={item}
@@ -107,7 +113,12 @@ export default function Header() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <Link href={href} className="text-neutral-600 hover:text-neutral-900 transition-colors block">
+                    <Link
+                      href={href}
+                      className={`text-neutral-600 hover:text-neutral-900 transition-colors block ${
+                        item === 'お見積もり・発注' ? 'font-semibold' : ''
+                      }`}
+                    >
                       {item}
                     </Link>
                   </motion.div>
