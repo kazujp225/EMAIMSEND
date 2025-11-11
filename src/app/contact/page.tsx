@@ -108,10 +108,10 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-50 via-white to-secondary-50 pt-24 pb-12">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+          <h1 className="heading-1 mb-6">
             お問い合わせ
           </h1>
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="lead-text max-w-3xl mx-auto">
             ご質問やご相談がございましたら、お気軽にお問い合わせください。<br />
             通常1営業日以内にご返信いたします。
           </p>
@@ -132,10 +132,10 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+              <h2 className="heading-2 mb-4">
                 送信完了しました
               </h2>
-              <p className="text-neutral-600 mb-8">
+              <p className="body-large mb-8">
                 お問い合わせありがとうございます。<br />
                 担当者より1営業日以内にご返信いたします。
               </p>
@@ -163,7 +163,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-neutral-900 mb-2">
+                  <label htmlFor="name" className="block label-text mb-2">
                     お名前 <span className="text-secondary-500">*</span>
                   </label>
                   <input
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     placeholder="山田 太郎"
                   />
                   {errors.name && (
-                    <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                    <p className="mt-2 body-small text-red-600 flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                       </svg>
@@ -191,7 +191,7 @@ export default function ContactPage() {
 
                 {/* Company Field */}
                 <div>
-                  <label htmlFor="company" className="block text-sm font-semibold text-neutral-900 mb-2">
+                  <label htmlFor="company" className="block label-text mb-2">
                     会社名
                   </label>
                   <input
@@ -207,7 +207,7 @@ export default function ContactPage() {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-neutral-900 mb-2">
+                  <label htmlFor="email" className="block label-text mb-2">
                     メールアドレス <span className="text-secondary-500">*</span>
                   </label>
                   <input
@@ -224,7 +224,7 @@ export default function ContactPage() {
                     placeholder="example@company.com"
                   />
                   {errors.email && (
-                    <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                    <p className="mt-2 body-small text-red-600 flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                       </svg>
@@ -235,7 +235,7 @@ export default function ContactPage() {
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-neutral-900 mb-2">
+                  <label htmlFor="message" className="block label-text mb-2">
                     お問い合わせ内容 <span className="text-secondary-500">*</span>
                   </label>
                   <textarea
@@ -252,7 +252,7 @@ export default function ContactPage() {
                     placeholder="お問い合わせ内容をご記入ください..."
                   />
                   {errors.message && (
-                    <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                    <p className="mt-2 body-small text-red-600 flex items-center gap-1">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                       </svg>

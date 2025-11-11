@@ -113,14 +113,14 @@ export default function OrderPage() {
         <section className="bg-gradient-to-br from-primary-50 to-white py-16">
           <div className="container-custom">
             <ScrollReveal className="text-center max-w-3xl mx-auto">
-              <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full text-sm font-semibold mb-4">
+              <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full badge-text mb-4">
                 お見積もり・発注
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+              <h1 className="heading-1 mb-6">
                 プランを選んで、<br />
                 <span className="text-gradient">今すぐ始める</span>
               </h1>
-              <p className="text-lg text-neutral-600 leading-relaxed">
+              <p className="lead-text">
                 御社に最適なプランをお選びください。<br />
                 お見積もりは無料。3営業日以内にご連絡いたします。
               </p>
@@ -137,7 +137,7 @@ export default function OrderPage() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Plan Selection */}
                   <div className="card">
-                    <h2 className="text-2xl font-bold text-neutral-900 mb-6">プラン選択</h2>
+                    <h2 className="heading-2 mb-6">プラン選択</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                       {plans.map((plan) => (
                         <motion.button
@@ -183,10 +183,10 @@ export default function OrderPage() {
 
                   {/* Company Information */}
                   <div className="card">
-                    <h2 className="text-2xl font-bold text-neutral-900 mb-6">企業情報</h2>
+                    <h2 className="heading-2 mb-6">企業情報</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           会社名 <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -200,7 +200,7 @@ export default function OrderPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           部署名
                         </label>
                         <input
@@ -213,7 +213,7 @@ export default function OrderPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           ご担当者名 <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -227,7 +227,7 @@ export default function OrderPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           メールアドレス <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -241,7 +241,7 @@ export default function OrderPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           電話番号 <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -255,7 +255,7 @@ export default function OrderPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           従業員数
                         </label>
                         <select
@@ -277,10 +277,10 @@ export default function OrderPage() {
 
                   {/* Usage Details */}
                   <div className="card">
-                    <h2 className="text-2xl font-bold text-neutral-900 mb-6">利用予定</h2>
+                    <h2 className="heading-2 mb-6">利用予定</h2>
                     <div className="space-y-6">
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           月間送信予定通数
                         </label>
                         <select
@@ -298,7 +298,7 @@ export default function OrderPage() {
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-neutral-700 mb-2">
+                        <label className="block label-text mb-2">
                           ご要望・ご質問
                         </label>
                         <textarea
@@ -333,7 +333,7 @@ export default function OrderPage() {
               <ScrollReveal className="lg:col-span-1" delay={0.2}>
                 <div className="sticky top-24">
                   <div className="card bg-gradient-to-br from-primary-50 to-white border-2 border-primary-200">
-                    <h3 className="text-xl font-bold text-neutral-900 mb-6">お見積もり内容</h3>
+                    <h3 className="heading-3 mb-6">お見積もり内容</h3>
 
                     <div className="space-y-4 mb-6">
                       <div>
