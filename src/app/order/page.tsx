@@ -56,7 +56,7 @@ export default function OrderPage() {
       id: 'step',
       name: 'ステップメール',
       price: 360000,
-      volume: '無制限',
+      volume: '2ヶ月間配信',
       description: '自動化フロー完備',
       features: [
         'ボリュームの全機能',

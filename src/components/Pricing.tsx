@@ -83,9 +83,9 @@ export default function Pricing() {
       name: 'ステップメール',
       price: '¥360,000',
       period: '/ 月',
-      description: '自動化フロー完備',
+      description: '2ヶ月間配信',
       features: [
-        { text: '無制限配信', included: true },
+        { text: '2ヶ月間のステップメール配信', included: true },
         { text: 'ボリュームの全機能', included: true },
         { text: 'ステップメール機能', included: true },
         { text: 'シナリオ自動化', included: true },
