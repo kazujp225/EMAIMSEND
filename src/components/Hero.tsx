@@ -24,7 +24,7 @@ export default function Hero() {
             </div>
 
             <h1 className="heading-1 mb-6 tracking-tight">
-              リファラルだけでは、もう限界。<br />
+              リファラルだけでは、<br className="hidden lg:inline" />もう限界。<br />
               でも、<span className="text-gradient">新規営業の準備</span>に
               3ヶ月もかけられない。
             </h1>
