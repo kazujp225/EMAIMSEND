@@ -49,7 +49,7 @@ export default function Header() {
               料金
             </Link>
             <Link href="/order" className="text-neutral-600 hover:text-neutral-900 transition-colors">
-              発注
+              申し込み
             </Link>
             <Link href="/contact" className="text-neutral-600 hover:text-neutral-900 transition-colors">
               お問い合わせ
@@ -97,7 +97,7 @@ export default function Header() {
               {[
                 { label: '機能', href: '/features' },
                 { label: '料金', href: '/pricing' },
-                { label: '発注', href: '/order' },
+                { label: '申し込み', href: '/order' },
                 { label: 'お問い合わせ', href: '/contact' },
                 { label: '会社概要', href: '/about' }
               ].map((item, index) => (

@@ -101,7 +101,7 @@ export default function OrderPage() {
     e.preventDefault();
     // ここで実際の発注処理を実装
     console.log('Order submitted:', { plan: selectedPlan, ...formData });
-    alert('お見積もりリクエストを受け付けました。担当者より3営業日以内にご連絡いたします。');
+    alert('申し込みを受け付けました。担当者より3営業日以内にご連絡いたします。');
   };
 
   return (
@@ -114,7 +114,7 @@ export default function OrderPage() {
           <div className="container-custom">
             <ScrollReveal className="text-center max-w-3xl mx-auto">
               <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full badge-text mb-4">
-                お見積もり・発注
+                プラン申し込み
               </div>
               <h1 className="heading-1 mb-6">
                 プランを選んで、<br />
@@ -122,7 +122,7 @@ export default function OrderPage() {
               </h1>
               <p className="lead-text">
                 御社に最適なプランをお選びください。<br />
-                お見積もりは無料。3営業日以内にご連絡いたします。
+                3営業日以内にご連絡いたします。
               </p>
             </ScrollReveal>
           </div>
@@ -138,7 +138,7 @@ export default function OrderPage() {
                   {/* Plan Selection */}
                   <div className="card">
                     <h2 className="heading-2 mb-6">プラン選択</h2>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-4 gap-4">
                       {plans.map((plan) => (
                         <motion.button
                           key={plan.id}
@@ -320,11 +320,11 @@ export default function OrderPage() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    お見積もりをリクエスト
+                    申し込む
                   </motion.button>
 
                   <p className="text-sm text-neutral-500 text-center">
-                    ※ お見積もりは無料です。3営業日以内に担当者よりご連絡いたします。
+                    ※ 3営業日以内に担当者よりご連絡いたします。
                   </p>
                 </form>
               </ScrollReveal>
@@ -333,7 +333,7 @@ export default function OrderPage() {
               <ScrollReveal className="lg:col-span-1" delay={0.2}>
                 <div className="sticky top-24">
                   <div className="card bg-gradient-to-br from-primary-50 to-white border-2 border-primary-200">
-                    <h3 className="heading-3 mb-6">お見積もり内容</h3>
+                    <h3 className="heading-3 mb-6">申し込み内容</h3>
 
                     <div className="space-y-4 mb-6">
                       <div>
