@@ -18,22 +18,22 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full text-primary-700 font-medium text-sm mb-8 border border-primary-100">
+            <div className="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full text-primary-700 font-medium badge-text mb-8 border border-primary-100">
               <span className="w-2 h-2 rounded-full bg-primary-500 mr-2"></span>
               本来3ヶ月かかる準備を、30秒で
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight mb-6 tracking-tight">
+            <h1 className="heading-1 mb-6 tracking-tight">
               リファラルだけでは、もう限界。<br />
-              でも、<span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">新規営業の準備</span>に<br className="md:hidden" />3ヶ月もかけられない。
+              でも、<span className="text-gradient">新規営業の準備</span>に<br className="md:hidden" />3ヶ月もかけられない。
             </h1>
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-neutral-800 mb-8 leading-snug">
+            <h2 className="heading-2 text-neutral-800 mb-8">
               文章を書く。それ以外は、<span className="text-primary-600">全部代行</span>。
             </h2>
 
-            <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
-              営業メール配信に必要な<span className="font-semibold text-neutral-700">「文章推敲」「HTMLメール制作」「配信インフラ」「営業リスト」</span>の4つを丸ごと代行。<br />
+            <p className="lead-text mb-8 max-w-2xl mx-auto lg:mx-0">
+              営業メール配信に必要な<span className="emphasis-text">「文章推敲」「HTMLメール制作」「配信インフラ」「営業リスト」</span>の4つを丸ごと代行。<br />
               <span className="text-neutral-500">下書きをペーストするだけで、AIが推敲・整形し、今日から新規営業を始められます。</span>
             </p>
 
@@ -48,7 +48,7 @@ export default function Hero() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-neutral-600 justify-center lg:justify-start border-t border-neutral-100 pt-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 body-small justify-center lg:justify-start border-t border-neutral-100 pt-6">
               {[
                 'クレジットカード不要',
                 '1クリック配信停止',
@@ -63,7 +63,7 @@ export default function Hero() {
               ))}
             </div>
 
-            <p className="text-xs text-neutral-400 mt-4 text-center lg:text-left">
+            <p className="caption-text mt-4 text-center lg:text-left">
               ※ 同意済み宛先への送信を前提としています
             </p>
           </motion.div>
@@ -116,8 +116,8 @@ export default function Hero() {
               <div className="flex items-center gap-2">
                 <span className="text-xl">⚡</span>
                 <div>
-                  <div className="text-xs text-neutral-500">処理時間</div>
-                  <div className="text-sm font-bold text-neutral-900">5-10秒</div>
+                  <div className="caption-text">処理時間</div>
+                  <div className="body-small emphasis-text">5-10秒</div>
                 </div>
               </div>
             </div>
@@ -126,8 +126,8 @@ export default function Hero() {
               <div className="flex items-center gap-2">
                 <span className="text-xl">📧</span>
                 <div>
-                  <div className="text-xs text-neutral-500">到達率</div>
-                  <div className="text-sm font-bold text-neutral-900">95%以上</div>
+                  <div className="caption-text">到達率</div>
+                  <div className="body-small emphasis-text">95%以上</div>
                 </div>
               </div>
             </div>

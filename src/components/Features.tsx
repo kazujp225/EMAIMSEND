@@ -48,14 +48,14 @@ export default function Features() {
       <div className="container-custom">
         {/* Section Header */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 rounded-full text-xs font-semibold mb-3">
+          <div className="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 rounded-full badge-text mb-3">
             ✨ 主要機能
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 mb-4">
+          <h2 className="heading-2 mb-4">
             営業メールの<span className="text-gradient">すべて</span>を、<br />
             シンプルに。
           </h2>
-          <p className="text-base text-neutral-600 leading-relaxed">
+          <p className="body-large">
             複雑なMAツールは不要。必要な機能だけを、使いやすく。
           </p>
         </ScrollReveal>
@@ -78,13 +78,13 @@ export default function Features() {
                     {feature.icon}
                   </motion.div>
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+                <h3 className="heading-4 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-3">
+                <p className="body-normal mb-3">
                   {feature.description}
                 </p>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary-50 text-primary-700 rounded-full badge-text">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
@@ -97,7 +97,7 @@ export default function Features() {
 
         {/* Bottom CTA */}
         <ScrollReveal className="mt-12 text-center" delay={0.3}>
-          <p className="text-sm text-neutral-600 mb-4">
+          <p className="body-normal mb-4">
             すべての機能を無料プランでお試しいただけます
           </p>
           <motion.a

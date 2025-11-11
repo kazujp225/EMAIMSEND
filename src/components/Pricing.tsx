@@ -123,14 +123,14 @@ export default function Pricing() {
       <div className="container-custom">
         {/* Section Header */}
         <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full text-sm font-semibold mb-4">
+          <div className="inline-block px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full badge-text mb-4">
             料金プラン
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+          <h2 className="heading-1 mb-6">
             <span className="text-gradient">市場価格の20%安</span>で、<br />
             最高品質のサービスを。
           </h2>
-          <p className="text-lg text-neutral-600 leading-relaxed">
+          <p className="lead-text">
             大量配信も、ステップメールも。競合より20%安い価格で提供。<br />
             14日間無料トライアル・いつでも解約可能です。
           </p>
@@ -152,7 +152,7 @@ export default function Pricing() {
               {/* Badge */}
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                  <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-4 py-1 rounded-full badge-text shadow-lg">
                     {plan.badge}
                   </div>
                 </div>
@@ -160,8 +160,8 @@ export default function Pricing() {
 
               {/* Plan Header */}
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">{plan.name}</h3>
-                <p className="text-sm text-neutral-500 mb-4">{plan.description}</p>
+                <h3 className="heading-3 mb-2">{plan.name}</h3>
+                <p className="body-small mb-4">{plan.description}</p>
                 <div className="flex items-end justify-center gap-1">
                   <span className="text-4xl font-bold text-neutral-900">{plan.price}</span>
                   {plan.period && <span className="text-neutral-500 mb-1">{plan.period}</span>}
@@ -210,13 +210,13 @@ export default function Pricing() {
         <ScrollReveal delay={0.4}>
           <div className="max-w-5xl mx-auto mb-16">
             <div className="text-center mb-8">
-              <div className="inline-block px-4 py-2 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white rounded-full text-sm font-bold mb-4">
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white rounded-full badge-text mb-4">
                 買い切りプラン
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">
+              <h3 className="heading-2 mb-2">
                 ツールを<span className="text-gradient">完全所有</span>したい企業様へ
               </h3>
-              <p className="text-neutral-600">
+              <p className="body-large">
                 初期費用のみで、永年ご利用いただけます。ランニングコストはAPI費用のみ。
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function Pricing() {
             >
               {/* Badge */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-6 py-2 rounded-full badge-text shadow-lg">
                   {plans[4].badge}
                 </div>
               </div>
