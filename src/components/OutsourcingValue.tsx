@@ -250,10 +250,10 @@ export default function OutsourcingValue() {
             </div>
 
             <a
-              href="/signup"
+              href="/order"
               className="btn-primary btn-lg inline-block"
             >
-              今すぐ無料で始める
+              今すぐ申し込む
             </a>
           </div>
         </ScrollReveal>

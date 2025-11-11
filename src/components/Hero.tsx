@@ -40,8 +40,8 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-              <Link href="/signup" className="btn-primary btn-lg block">
-                今すぐ無料で始める
+              <Link href="/order" className="btn-primary btn-lg block">
+                今すぐ申し込む
               </Link>
               <Link href="#outsourcing-value" className="btn-secondary btn-lg block">
                 代行の詳細を見る

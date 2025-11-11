@@ -38,10 +38,10 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/signup"
+              href="/order"
               className="btn-primary text-lg px-8 py-4"
             >
-              無料で始める
+              今すぐ申し込む
             </Link>
             <Link
               href="/contact"
@@ -67,10 +67,10 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              href="/signup"
+              href="/order"
               className="bg-white text-primary-600 font-bold px-8 py-4 rounded-xl hover:bg-primary-50 transition-all shadow-lg hover:shadow-xl"
             >
-              今すぐ無料で始める
+              今すぐ申し込む
             </Link>
             <Link
               href="/order"

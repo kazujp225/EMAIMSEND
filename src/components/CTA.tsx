@@ -25,7 +25,7 @@ export default function CTA() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link
-              href="/signup"
+              href="/order"
               className="bg-white text-primary-600 font-semibold px-9 py-4 rounded-xl hover:bg-primary-50 transition-all duration-200 shadow-xl hover:shadow-2xl text-lg"
             >
               無料で1通送ってみる

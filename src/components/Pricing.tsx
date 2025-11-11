@@ -39,7 +39,7 @@ export default function Pricing() {
         { text: 'テンプレート保存', included: false },
         { text: '送信履歴', included: false },
       ],
-      cta: '無料で始める',
+      cta: '今すぐ申し込む',
       highlighted: false,
     },
     {

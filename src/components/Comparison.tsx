@@ -337,12 +337,12 @@ export default function Comparison() {
             <h3 className="text-xl font-bold mb-2">SendCraftの優位性を体験</h3>
             <p className="text-sm mb-4 opacity-90">無料で1通送信。カード登録不要。</p>
             <motion.a
-              href="/signup"
+              href="/order"
               className="inline-block bg-white text-secondary-600 font-bold px-6 py-3 rounded-lg hover:bg-secondary-50 transition-colors shadow-lg text-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              無料で始める
+              今すぐ申し込む
             </motion.a>
           </div>
         </ScrollReveal>

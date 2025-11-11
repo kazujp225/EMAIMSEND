@@ -101,12 +101,12 @@ export default function Features() {
             すべての機能を無料プランでお試しいただけます
           </p>
           <motion.a
-            href="/signup"
+            href="/order"
             className="btn-primary btn-lg inline-block"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            今すぐ無料で始める
+            今すぐ申し込む
           </motion.a>
         </ScrollReveal>
       </div>

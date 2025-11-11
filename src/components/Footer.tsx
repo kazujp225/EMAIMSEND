@@ -8,7 +8,7 @@ export default function Footer() {
         { name: '機能', href: '/features' },
         { name: '料金', href: '/pricing' },
         { name: '発注', href: '/order' },
-        { name: '無料で始める', href: '/signup' },
+        { name: '今すぐ申し込む', href: '/signup' },
       ],
     },
     resources: {
@@ -58,8 +58,8 @@ export default function Footer() {
               下書きをペーストするだけで今日から新規営業を始められます。
             </p>
             <div className="mb-6">
-              <Link href="/signup" className="inline-block px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold transition-colors">
-                無料で始める
+              <Link href="/order" className="inline-block px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold transition-colors">
+                今すぐ申し込む
               </Link>
             </div>
             {/* Social Links */}

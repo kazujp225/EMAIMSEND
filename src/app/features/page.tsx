@@ -129,8 +129,8 @@ export default function FeaturesPage() {
               営業メール配信に必要なすべての機能を、一つのプラットフォームで。<br />
               下書きをペーストするだけで、今日から新規営業を始められます。
             </p>
-            <Link href="/signup" className="btn-primary btn-lg inline-block">
-              今すぐ無料で始める
+            <Link href="/order" className="btn-primary btn-lg inline-block">
+              今すぐ申し込む
             </Link>
           </div>
         </div>
@@ -501,8 +501,8 @@ export default function FeaturesPage() {
               クレジットカード登録不要。1通から始められます。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/signup" className="btn-primary btn-lg">
-                今すぐ無料で始める
+              <Link href="/order" className="btn-primary btn-lg">
+                今すぐ申し込む
               </Link>
               <Link href="/contact" className="btn-secondary btn-lg">
                 お問い合わせ

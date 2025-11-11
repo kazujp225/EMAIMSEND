@@ -147,10 +147,10 @@ export default function SimpleSteps() {
               360倍の時短を実現
             </p>
             <Link
-              href="/signup"
+              href="/order"
               className="inline-block bg-primary-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors"
             >
-              今すぐ無料で始める
+              今すぐ申し込む
             </Link>
             <p className="text-sm text-neutral-500 mt-4">
               クレジットカード不要・30秒で登録完了・今日から営業メール送信

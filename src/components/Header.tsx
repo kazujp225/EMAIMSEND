@@ -61,12 +61,9 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/login" className="text-neutral-700 hover:text-neutral-900 font-medium transition-colors">
-              ログイン
-            </Link>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/signup" className="btn-primary">
-                無料で始める
+              <Link href="/order" className="btn-primary">
+                今すぐ申し込む
               </Link>
             </motion.div>
           </div>
@@ -119,11 +116,8 @@ export default function Header() {
                 </motion.div>
               ))}
               <hr className="border-neutral-200" />
-              <Link href="/login" className="text-neutral-700 hover:text-neutral-900 font-medium">
-                ログイン
-              </Link>
-              <Link href="/signup" className="btn-primary text-center">
-                無料で始める
+              <Link href="/order" className="btn-primary text-center">
+                今すぐ申し込む
               </Link>
             </div>
           </motion.div>
