@@ -37,7 +37,7 @@ export default function Header() {
             <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
-            <span className="text-xl font-bold text-neutral-900">SendCraft</span>
+            <span className="text-xl font-bold text-neutral-900">フォーム営業モーヤメ</span>
           </Link>
 
           {/* Desktop Navigation */}

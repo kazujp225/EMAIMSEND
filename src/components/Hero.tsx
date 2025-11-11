@@ -80,7 +80,7 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 </div>
                 <div className="flex-1 text-center text-sm text-neutral-600 font-medium">
-                  SendCraft Editor
+                  フォーム営業モーヤメ Editor
                 </div>
               </div>
 

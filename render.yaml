@@ -1,0 +1,21 @@
+services:
+  # Next.js Web Service
+  - type: web
+    name: form-eigyo-moyame
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: NODE_ENV
+        value: production
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        value: info@form-eigyo-moyame.jp
+      - key: ANTHROPIC_API_KEY
+        sync: false
+    autoDeploy: true

@@ -192,7 +192,7 @@ export default function FeaturesPage() {
         <div className="container-custom">
           <div className="text-center text-white mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              数字で見るSendCraft
+              数字で見るフォーム営業モーヤメ
             </h2>
             <p className="text-primary-100 text-lg">
               多くの企業様に選ばれている理由
@@ -249,7 +249,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                「従来のツールは複雑で学習コストが高かったですが、SendCraftは直感的で営業メンバー全員がすぐに使えるようになりました。配信時間が80%削減できました。」
+                「従来のツールは複雑で学習コストが高かったですが、フォーム営業モーヤメは直感的で営業メンバー全員がすぐに使えるようになりました。配信時間が80%削減できました。」
               </p>
               <div className="flex items-center gap-4 text-sm text-neutral-500">
                 <div className="flex items-center gap-1">
@@ -297,7 +297,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
               <p className="text-neutral-600 leading-relaxed mb-4">
-                「HTMLメールの制作を外注していましたが、SendCraftでコストを70%削減。AIによる自動整形で、プロ品質のメールが社内で完結できるようになりました。」
+                「HTMLメールの制作を外注していましたが、フォーム営業モーヤメでコストを70%削減。AIによる自動整形で、プロ品質のメールが社内で完結できるようになりました。」
               </p>
               <div className="flex items-center gap-4 text-sm text-neutral-500">
                 <div className="flex items-center gap-1">
@@ -335,7 +335,7 @@ export default function FeaturesPage() {
                 ))}
               </div>
               <p className="text-neutral-700 leading-relaxed mb-6">
-                「営業メールの作成に悩んでいましたが、SendCraftのAI推敲機能で文章が驚くほど洗練されます。業種別テンプレートも充実していて、ターゲットに合わせた提案が簡単にできるようになりました。」
+                「営業メールの作成に悩んでいましたが、フォーム営業モーヤメのAI推敲機能で文章が驚くほど洗練されます。業種別テンプレートも充実していて、ターゲットに合わせた提案が簡単にできるようになりました。」
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-neutral-200 rounded-full flex items-center justify-center text-neutral-600 font-bold">

@@ -2,13 +2,13 @@
 
 ## 概要
 
-SendCraft API v1の仕様書です。すべてのAPIはRESTful設計に従い、JSON形式でデータをやり取りします。
+フォーム営業モーヤメ API v1の仕様書です。すべてのAPIはRESTful設計に従い、JSON形式でデータをやり取りします。
 
 ## ベースURL
 
 ```
 開発環境: http://localhost:3000/api/v1
-本番環境: https://api.sendcraft.jp/v1
+本番環境: https://api.form-eigyo-moyame.jp/v1
 ```
 
 ## 認証

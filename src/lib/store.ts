@@ -47,7 +47,7 @@ export const useAppStore = create<AppState>()(
         setTheme: (theme) => set({ theme }),
       }),
       {
-        name: 'sendcraft-storage',
+        name: 'form-eigyo-moyame-storage',
         partialize: (state) => ({
           theme: state.theme,
           sidebarOpen: state.sidebarOpen,

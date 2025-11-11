@@ -52,7 +52,7 @@ export default function AboutPage() {
               営業メールの<span className="text-gradient">新しい基準</span>を作る
             </h1>
             <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mb-8">
-              SendCraftは、営業メールの作成・整形・送信を最短30秒で完了できるSaaSプラットフォームです。<br />
+              フォーム営業モーヤメは、営業メールの作成・整形・送信を最短30秒で完了できるSaaSプラットフォームです。<br />
               複雑なツールでも、到達率だけのサービスでもない。<br />
               "文章を貼って1通送る"の体験を、最高品質で。
             </p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
               </div>
 
               <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-6 rounded-2xl text-white border-4 border-primary-600 shadow-xl">
-                <div className="text-primary-100 text-sm font-semibold mb-2">SendCraft</div>
+                <div className="text-primary-100 text-sm font-semibold mb-2">フォーム営業モーヤメ</div>
                 <div className="font-bold mb-3">シンプルで高品質</div>
                 <ul className="text-sm text-primary-100 space-y-2">
                   <li>• 直感的で簡単</li>
@@ -230,7 +230,7 @@ export default function AboutPage() {
               歩み
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              SendCraftのこれまで
+              フォーム営業モーヤメのこれまで
             </h2>
           </div>
 
@@ -247,7 +247,7 @@ export default function AboutPage() {
                 <div className="flex-1 pb-8">
                   <h3 className="text-xl font-bold text-neutral-900 mb-2">サービス構想開始</h3>
                   <p className="text-neutral-600 leading-relaxed">
-                    営業メール配信の課題を解決するため、SendCraftの構想がスタート。複雑なツールと到達率重視のサービスの間に、新しいカテゴリを創造することを決意。
+                    営業メール配信の課題を解決するため、フォーム営業モーヤメの構想がスタート。複雑なツールと到達率重視のサービスの間に、新しいカテゴリを創造することを決意。
                   </p>
                 </div>
               </div>
@@ -372,7 +372,7 @@ export default function AboutPage() {
             <div className="inline-block bg-white rounded-2xl p-8 border border-neutral-200 max-w-2xl">
               <h3 className="text-xl font-bold text-neutral-900 mb-4">一緒に働きませんか？</h3>
               <p className="text-neutral-600 leading-relaxed mb-6">
-                SendCraftは、営業メール配信の新しい基準を作るために、チームメンバーを募集しています。<br />
+                フォーム営業モーヤメは、営業メール配信の新しい基準を作るために、チームメンバーを募集しています。<br />
                 プロダクトエンジニア、デザイナー、マーケターなど、さまざまなポジションで募集中です。
               </p>
               <Link href="/careers" className="btn-primary">
@@ -394,7 +394,7 @@ export default function AboutPage() {
               信頼できるパートナー企業
             </h2>
             <p className="text-lg text-neutral-600">
-              SendCraftは、業界をリードする企業とパートナーシップを結んでいます
+              フォーム営業モーヤメは、業界をリードする企業とパートナーシップを結んでいます
             </p>
           </div>
 
@@ -446,10 +446,10 @@ export default function AboutPage() {
       <section className="section bg-gradient-to-br from-primary-500 to-primary-600 text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            SendCraftを無料で体験
+            フォーム営業モーヤメを無料で体験
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            クレジットカード不要。1通のメール送信で、SendCraftの品質を今すぐ体験できます。
+            クレジットカード不要。1通のメール送信で、フォーム営業モーヤメの品質を今すぐ体験できます。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link

@@ -6,7 +6,7 @@ import ScrollReveal from './ScrollReveal';
 export default function Comparison() {
   const competitors = [
     {
-      name: 'SendCraft',
+      name: 'フォーム営業モーヤメ',
       isSelf: true,
       features: {
         targetList: { value: '◎', label: '充実' },
@@ -145,7 +145,7 @@ export default function Comparison() {
             他社比較
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            SendCraftが<span className="text-gradient">選ばれる理由</span>
+            フォーム営業モーヤメが<span className="text-gradient">選ばれる理由</span>
           </h2>
           <p className="text-base text-neutral-600">
             充実した法人リスト×AI×デザインで他社を圧倒
@@ -334,7 +334,7 @@ export default function Comparison() {
         {/* Bottom CTA - コンパクト */}
         <ScrollReveal className="mt-12 text-center" delay={0.4}>
           <div className="inline-block p-6 bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-xl shadow-xl text-white">
-            <h3 className="text-xl font-bold mb-2">SendCraftの優位性を体験</h3>
+            <h3 className="text-xl font-bold mb-2">フォーム営業モーヤメの優位性を体験</h3>
             <p className="text-sm mb-4 opacity-90">無料で1通送信。カード登録不要。</p>
             <motion.a
               href="/order"

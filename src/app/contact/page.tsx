@@ -79,17 +79,20 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          // Simulate random error for demonstration (10% chance)
-          if (Math.random() < 0.1) {
-            reject(new Error('送信に失敗しました。しばらくしてから再度お試しください。'));
-          } else {
-            resolve(true);
-          }
-        }, 1500);
+      // API呼び出し
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || '送信に失敗しました');
+      }
 
       setIsSubmitting(false);
       setSubmitted(true);
@@ -304,8 +307,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-semibold text-neutral-900 mb-2">メール</h3>
               <p className="text-neutral-600 text-sm">
-                <a href="mailto:info@sendcraft.jp" className="hover:text-primary-500 transition-colors">
-                  info@sendcraft.jp
+                <a href="mailto:info@form-eigyo-moyame.jp" className="hover:text-primary-500 transition-colors">
+                  info@form-eigyo-moyame.jp
                 </a>
               </p>
             </div>
@@ -389,7 +392,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-neutral-900 mb-1 group-hover:text-primary-600 transition-colors">SendCraftについて</h4>
+                    <h4 className="font-semibold text-neutral-900 mb-1 group-hover:text-primary-600 transition-colors">フォーム営業モーヤメについて</h4>
                     <p className="text-sm text-neutral-600">会社概要、ミッション、ビジョン</p>
                   </div>
                 </div>

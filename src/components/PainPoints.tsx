@@ -41,7 +41,7 @@ export default function PainPoints() {
             準備で挫折していませんか？
           </h2>
           <p className="text-lg text-neutral-600 leading-relaxed">
-            リファラル営業の限界を感じても、メール営業の準備には専門知識・時間・コストが必要です。SendCraftなら、これらすべての課題を解決します。
+            リファラル営業の限界を感じても、メール営業の準備には専門知識・時間・コストが必要です。フォーム営業モーヤメなら、これらすべての課題を解決します。
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function PainPoints() {
         {/* Bottom Message */}
         <div className="max-w-3xl mx-auto text-center border-t border-neutral-200 pt-12">
           <h3 className="text-2xl font-bold text-neutral-900 mb-4">
-            これらすべての課題を、SendCraftが解決します
+            これらすべての課題を、フォーム営業モーヤメが解決します
           </h3>
           <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
             文章を書く。それ以外は、全部代行。<br />

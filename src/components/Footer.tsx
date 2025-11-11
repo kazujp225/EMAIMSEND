@@ -50,7 +50,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
               </div>
-              <span className="text-xl font-bold text-white">SendCraft</span>
+              <span className="text-xl font-bold text-white">フォーム営業モーヤメ</span>
             </Link>
             <p className="text-neutral-400 mb-6 leading-relaxed">
               文章を書く。それ以外は、全部代行。<br />
@@ -103,7 +103,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-neutral-500">
-              © {new Date().getFullYear()} SendCraft. All rights reserved.
+              © {new Date().getFullYear()} フォーム営業モーヤメ. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm text-neutral-500">
               <span className="flex items-center gap-2">

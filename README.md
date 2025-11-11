@@ -1,4 +1,4 @@
-# SendCraft
+# フォーム営業モーヤメ
 
 > 貼って、整えて、刺さる。営業メールを1クリックで。
 
@@ -6,7 +6,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 
-SendCraftは、営業メールの作成・整形・送信を最短30秒で完了できるSaaSプラットフォームです。
+フォーム営業モーヤメは、営業メールの作成・整形・送信を最短30秒で完了できるSaaSプラットフォームです。
 
 ---
 
@@ -28,7 +28,7 @@ SendCraftは、営業メールの作成・整形・送信を最短30秒で完了
 ![Hero Screenshot](./docs/images/hero-screenshot.png)
 *（作成予定）*
 
-[ライブデモを見る →](https://sendcraft.com/demo)
+[ライブデモを見る →](https://form-eigyo-moyame.jp/demo)
 *（作成予定）*
 
 ---
@@ -83,8 +83,8 @@ SendCraftは、営業メールの作成・整形・送信を最短30秒で完了
 ### 1. リポジトリのクローン
 
 ```bash
-git clone https://github.com/your-org/sendcraft.git
-cd sendcraft
+git clone https://github.com/your-org/form-eigyo-moyame.git
+cd form-eigyo-moyame
 ```
 
 ### 2. 依存関係のインストール
@@ -104,8 +104,12 @@ cp .env.example .env.local
 `.env.local` を編集:
 
 ```env
+# Resend (お問い合わせフォーム自動返信)
+RESEND_API_KEY="re_..." # https://resend.com/api-keys から取得
+EMAIL_FROM="info@form-eigyo-moyame.jp" # 送信元メールアドレス
+
 # Database
-DATABASE_URL="postgresql://user:password@localhost:5432/sendcraft"
+DATABASE_URL="postgresql://user:password@localhost:5432/form_eigyo_moyame"
 
 # Redis
 REDIS_URL="redis://localhost:6379"
@@ -114,8 +118,8 @@ REDIS_URL="redis://localhost:6379"
 NEXTAUTH_SECRET="your-secret-key"
 NEXTAUTH_URL="http://localhost:3000"
 
-# OpenAI (SONNET)
-OPENAI_API_KEY="sk-..."
+# Anthropic (Claude Sonnet)
+ANTHROPIC_API_KEY="sk-ant-..."
 
 # SendGrid
 SENDGRID_API_KEY="SG..."
@@ -150,7 +154,7 @@ yarn dev
 ## 📁 プロジェクト構造
 
 ```
-sendcraft/
+form-eigyo-moyame/
 ├── src/
 │   ├── app/                    # Next.js App Router
 │   │   ├── (auth)/            # 認証関連ページ
@@ -246,7 +250,7 @@ yarn start
 - SQL インジェクション対策（Prisma ORM使用）
 
 ### 脆弱性報告
-セキュリティ上の問題を発見した場合は、[security@sendcraft.com](mailto:security@sendcraft.com) までご連絡ください。
+セキュリティ上の問題を発見した場合は、[security@form-eigyo-moyame.jp](mailto:security@form-eigyo-moyame.jp) までご連絡ください。
 
 ---
 
@@ -309,22 +313,22 @@ yarn start
 
 ## 🙏 謝辞
 
-SendCraftの開発にあたり、以下のオープンソースプロジェクトとサービスに感謝します:
+フォーム営業モーヤメの開発にあたり、以下のオープンソースプロジェクトとサービスに感謝します:
 
 - [Next.js](https://nextjs.org/) - フレームワーク
 - [Tailwind CSS](https://tailwindcss.com/) - スタイリング
 - [Prisma](https://www.prisma.io/) - データベースORM
-- [OpenAI](https://openai.com/) - AI処理
+- [Anthropic](https://www.anthropic.com/) - AI推敲・HTML化
 - [Heroicons](https://heroicons.com/) - アイコン
 
 ---
 
 ## 📞 サポート・お問い合わせ
 
-- **公式サイト**: [https://sendcraft.com](https://sendcraft.com)（作成予定）
-- **ドキュメント**: [https://docs.sendcraft.com](https://docs.sendcraft.com)（作成予定）
-- **問い合わせ**: [support@sendcraft.com](mailto:support@sendcraft.com)
-- **Twitter**: [@SendCraft](https://twitter.com/sendcraft)（作成予定）
+- **公式サイト**: [https://form-eigyo-moyame.jp](https://form-eigyo-moyame.jp)（作成予定）
+- **ドキュメント**: [https://docs.form-eigyo-moyame.jp](https://docs.form-eigyo-moyame.jp)（作成予定）
+- **問い合わせ**: [support@form-eigyo-moyame.jp](mailto:support@form-eigyo-moyame.jp)
+- **Twitter**: [@FormEigyoMoyame](https://twitter.com/formeigyomoyame)（作成予定）
 
 ---
 
@@ -340,8 +344,8 @@ SendCraftの開発にあたり、以下のオープンソースプロジェク�
 
 もしこのプロジェクトが役に立ったら、ぜひスターをお願いします！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=your-org/sendcraft&type=Date)](https://star-history.com/#your-org/sendcraft&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=your-org/form-eigyo-moyame&type=Date)](https://star-history.com/#your-org/form-eigyo-moyame&Date)
 
 ---
 
-**Made with ❤️ by SendCraft Team**
+**Made with ❤️ by フォーム営業モーヤメ Team**

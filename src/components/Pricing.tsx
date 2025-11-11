@@ -335,7 +335,7 @@ export default function Pricing() {
                   <td className="px-6 py-4 text-sm text-neutral-600 text-center">1通</td>
                   <td className="px-6 py-4 text-sm text-neutral-600 text-center">3,000通</td>
                   <td className="px-6 py-4 text-sm text-primary-600 font-semibold text-center bg-primary-50">150万通</td>
-                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">無制限</td>
+                  <td className="px-6 py-4 text-sm text-neutral-600 text-center">2ヶ月間配信</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-neutral-700">AI推敲機能</td>

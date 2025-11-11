@@ -76,10 +76,10 @@ export default function SimpleSteps() {
           ))}
         </div>
 
-        {/* Comparison: Traditional vs SendCraft */}
+        {/* Comparison: Traditional vs フォーム営業モーヤメ */}
         <div className="max-w-4xl mx-auto border-t border-neutral-200 pt-16">
           <h3 className="text-2xl font-bold text-neutral-900 mb-12 text-center">
-            従来の方法 vs SendCraft
+            従来の方法 vs フォーム営業モーヤメ
           </h3>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
@@ -112,10 +112,10 @@ export default function SimpleSteps() {
               </div>
             </div>
 
-            {/* SendCraft Method */}
+            {/* フォーム営業モーヤメ Method */}
             <div>
               <h4 className="text-lg font-bold text-neutral-900 mb-6 pb-3 border-b-2 border-primary-600">
-                SendCraft
+                フォーム営業モーヤメ
               </h4>
               <div className="space-y-4 text-sm text-neutral-600">
                 <div className="flex gap-3">

@@ -17,8 +17,8 @@ export default function OutsourcingValue() {
           'ABテストや改善のリソースが不足'
         ]
       },
-      sendcraft: {
-        title: 'SendCraftなら',
+      ourService: {
+        title: 'フォーム営業モーヤメなら',
         items: [
           'AIが自動で文章を推敲・改善',
           '業種別の最適な表現に変換'
@@ -42,8 +42,8 @@ export default function OutsourcingValue() {
           '到達率の低下リスク'
         ]
       },
-      sendcraft: {
-        title: 'SendCraftなら',
+      ourService: {
+        title: 'フォーム営業モーヤメなら',
         items: [
           '到達率95%以上を保証する専業インフラ',
           '設定不要、即日開始'
@@ -68,8 +68,8 @@ export default function OutsourcingValue() {
           '各メールクライアントでのテスト工数'
         ]
       },
-      sendcraft: {
-        title: 'SendCraftなら',
+      ourService: {
+        title: 'フォーム営業モーヤメなら',
         items: [
           'AI（SONNET）が5秒でプロ品質に変換',
           '専門スキル不要'
@@ -93,8 +93,8 @@ export default function OutsourcingValue() {
           'データの鮮度維持のコスト'
         ]
       },
-      sendcraft: {
-        title: 'SendCraftなら',
+      ourService: {
+        title: 'フォーム営業モーヤメなら',
         items: [
           '150万件の法人リストを業種別に分類',
           '常時更新、すぐに使える'
@@ -185,16 +185,16 @@ export default function OutsourcingValue() {
                       </ul>
                     </div>
 
-                    {/* SendCraft */}
+                    {/* フォーム営業モーヤメ */}
                     <div className="card bg-primary-50/50 border-primary-200 rounded-xl p-5">
                       <div className="flex items-center gap-2 mb-3">
                         <div className="w-7 h-7 bg-primary-100 rounded-lg flex items-center justify-center">
                           <span className="text-base font-bold text-primary-600">✓</span>
                         </div>
-                        <h4 className="font-semibold text-neutral-900">{item.sendcraft.title}</h4>
+                        <h4 className="font-semibold text-neutral-900">{item.ourService.title}</h4>
                       </div>
                       <ul className="space-y-2">
-                        {item.sendcraft.items.map((text, idx) => (
+                        {item.ourService.items.map((text, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-sm text-neutral-700 leading-relaxed">
                             <span className="text-primary-600 mt-1 flex-shrink-0 font-bold">✓</span>
                             <span>{text}</span>
@@ -239,7 +239,7 @@ export default function OutsourcingValue() {
             <div className="mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-full text-sm font-semibold shadow-sm mb-4">
                 <span>✨</span>
-                SendCraftに任せる
+                フォーム営業モーヤメに任せる
               </div>
               <p className="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">
                 これを丸ごと代行

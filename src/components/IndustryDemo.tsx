@@ -20,7 +20,7 @@ export default function IndustryDemo() {
       name: 'IT・SaaS',
       keywords: '導入期間・API連携・ROI',
       subject: '【導入2週間・ROI3ヶ月】営業DXツールのご紹介',
-      preview: '株式会社◯◯ △△様\n\nお世話になっております。\n\n営業チームの生産性を3倍にする「SendCraft」をご紹介いたします。\n\n【特徴】\n・Salesforce/HubSpot完全連携\n・平均ROI期間: 3ヶ月\n・初期設定わずか2週間\n\n無料トライアル（30日間）をぜひお試しください。',
+      preview: '株式会社◯◯ △△様\n\nお世話になっております。\n\n営業チームの生産性を3倍にする「フォーム営業モーヤメ」をご紹介いたします。\n\n【特徴】\n・Salesforce/HubSpot完全連携\n・平均ROI期間: 3ヶ月\n・初期設定わずか2週間\n\n無料トライアル（30日間）をぜひお試しください。',
     },
     {
       id: 'retail',
